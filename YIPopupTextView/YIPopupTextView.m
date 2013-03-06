@@ -172,12 +172,12 @@ typedef enum {
 
 @dynamic delegate;
 
-- (id)initWithPlaceHolder:(NSString*)placeHolder maxCount:(NSUInteger)maxCount
+- (id)initWithPlaceHolder:(NSString*)placeHolder maxCount:(NSInteger)maxCount
 {
     return [self initWithPlaceHolder:placeHolder maxCount:maxCount buttonStyle:YIPopupTextViewButtonStyleRightCancel tintsDoneButton:NO];
 }
 
-- (id)initWithPlaceHolder:(NSString*)placeHolder maxCount:(NSUInteger)maxCount buttonStyle:(YIPopupTextViewButtonStyle)buttonStyle tintsDoneButton:(BOOL)tintsDoneButton
+- (id)initWithPlaceHolder:(NSString*)placeHolder maxCount:(NSInteger)maxCount buttonStyle:(YIPopupTextViewButtonStyle)buttonStyle tintsDoneButton:(BOOL)tintsDoneButton
 {
     self = [super init];
     if (self) {

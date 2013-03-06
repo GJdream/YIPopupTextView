@@ -41,10 +41,10 @@ typedef NS_ENUM(NSInteger, YIPopupTextViewButtonStyle) {
 @property (nonatomic, assign) BOOL caretShiftGestureEnabled;    // default = NO
 
 - (id)initWithPlaceHolder:(NSString*)placeHolder
-                 maxCount:(NSUInteger)maxCount;     // YIPopupTextViewButtonStyleRightCancel & tintsDoneButton=NO
+                 maxCount:(NSInteger)maxCount;     // YIPopupTextViewButtonStyleRightCancel & tintsDoneButton=NO
 
 - (id)initWithPlaceHolder:(NSString*)placeHolder
-                 maxCount:(NSUInteger)maxCount
+                 maxCount:(NSInteger)maxCount
               buttonStyle:(YIPopupTextViewButtonStyle)buttonStyle
           tintsDoneButton:(BOOL)tintsDoneButton;
 
