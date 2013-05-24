@@ -213,7 +213,7 @@ typedef enum {
         if (maxCount > 0) {
             _countLabel = [[UILabel alloc] initWithFrame:CGRectZero];
             _countLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
-            _countLabel.textAlignment = UITextAlignmentRight;
+            _countLabel.textAlignment = NSTextAlignmentRight;
             _countLabel.backgroundColor = [UIColor clearColor];
             _countLabel.textColor = [UIColor lightGrayColor];
             _countLabel.font = [UIFont boldSystemFontOfSize:COUNT_SIZE];
@@ -407,7 +407,7 @@ typedef enum {
         [self.delegate popupTextView:self willDismissWithText:self.text cancelled:cancelled];
     }
     else if ([self.delegate respondsToSelector:@selector(popupTextView:willDismissWithText:)]) {
-        [self.delegate popupTextView:self willDismissWithText:self.text];
+        [self.delegate popupTextView:self willDismissWithText:self.text cancelled:cancelled];
     }
     
     [UIView animateWithDuration:ANIMATION_DURATION animations:^{
@@ -421,7 +421,7 @@ typedef enum {
                 [self.delegate popupTextView:self didDismissWithText:self.text cancelled:cancelled];
             }
             else if ([self.delegate respondsToSelector:@selector(popupTextView:didDismissWithText:)]) {
-                [self.delegate popupTextView:self didDismissWithText:self.text];
+                [self.delegate popupTextView:self didDismissWithText:self.text cancelled:cancelled];
             }
             
             [_backgroundView removeFromSuperview];
